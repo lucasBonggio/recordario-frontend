@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
-import url from proccess.env.REACT_APP_BACKEND_URL
+
+const url = import.meta.env.VITE_BACKEND_URL;
 
 const AuthContext = createContext();
 const API_AUTH =  url + "api/v1/autenticacion/usuario/me";
