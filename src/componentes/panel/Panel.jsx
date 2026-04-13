@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import Botonera from "../Botonera/Botonera";
+import Botonera from "../botonera/Botonera";
 import Tarjetero from "../tarjeta/Tarjetero";
 import VentanaAnalisis from "../ventanas/VentanaAnalisis";
 import { obtenerTarjetas } from "../../api/usuarioServicio";
 import VentanaRepaso from "../ventanas/VentanaRepaso";
 import { iniciarRepaso } from "../../api/repasoServicio";
-import Perfil from "../Perfil/Perfil";
-import Estadisticas from "../Estadisticas/Estadisticas";
+import Perfil from "../perfil/Perfil";
+import Estadisticas from "../estadisticas/Estadisticas";
 import SinTarjetas from "../tarjeta/SinTarjetas";
 
 import './Panel.css'

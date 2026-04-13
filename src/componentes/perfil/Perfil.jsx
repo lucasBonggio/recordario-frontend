@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { finalizarSesion, obtenerDatos } from "../../api/usuarioServicio";
-import VentanaCambiarContraseña from "../Ventanas/VentanaCambiarContraseña";
+import VentanaCambiarContraseña from "../ventanas/VentanaCambiarContraseña";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexto/AuthProvider";
 

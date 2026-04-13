@@ -1,8 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
+import url from process.env.REACT_APP_BACKEND_URL
 
 const AuthContext = createContext();
-const API_AUTH = "http://localhost:8080/api/v1/autenticacion/usuario/me";
+const API_AUTH =  url + "api/v1/autenticacion/usuario/me";
 
 export function AuthProvider({children}) {
     const [autenticado, setAutenticado] = useState(false);
