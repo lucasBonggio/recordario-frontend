@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Principal from "./paginas/principal/Principal";
-import Inicio from "./paginas/Inicio/Inicio";
+import Inicio from "./paginas/inicio/Inicio";
 import ProtectedRoute from "./componentes/ProtectedRoute";
 import BotonTema from "./componentes/botonTema/BotonTema";
 import { useEffect } from "react";
