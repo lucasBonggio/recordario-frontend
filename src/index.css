@@ -1,0 +1,99 @@
+:root {
+
+    --color-fondo: #f1f5f9;
+
+    --color-texto: #0f172a;
+    --color-subtexto: #475569;
+
+    --color-texto-botones: #ffffff;
+
+    --color-card: #ffffff;
+    --color-modal: #ffffff;
+
+    --color-gris: #e2e8f0;
+    --color-gris-oscuro: #94a3b8;
+
+    --color-azul: #2563eb;
+    --color-azul-hover: #1d4ed8;
+
+    --color-tarjeta: #2563eb;
+
+    --color-boton-azul: #2563eb;
+    --color-boton-azul-hover: #1d4ed8;
+
+    --color-boton-verde: #16a34a;
+    --color-boton-verde-hover: #15803d;
+
+    --color-boton-rojo: #dc2626;
+    --color-boton-rojo-hover: #b91c1c;
+
+    --color-verde: #22c55e;
+    --color-verde-hover: #16a34a;
+
+    --color-rojo: #ef4444;
+    --color-rojo-hover: #dc2626;
+
+    --color-naranja: #f59e0b;
+    --color-naranja-hover: #d97706;
+
+    --color-amarillo: #eab308;
+    --color-amarillo-hover: #ca8a04;
+
+    --color-verde-claro: #4ade80;
+    --color-verde-claro-hover: #22c55e;
+}
+
+[data-tema="oscuro"] {
+
+    --color-fondo: #0b0f14;
+
+    --color-texto: #e6edf3;
+    --color-subtexto: #9aa4af;
+
+    --color-texto-botones: #ffffff;
+
+    --color-card: #11161c;
+    --color-modal: #161b22;
+
+    --color-gris: #1f2630;
+    --color-gris-oscuro: #2a3441;
+
+    --color-azul: #3b82f6;
+    --color-azul-hover: #2563eb;
+
+    --color-tarjeta: #1d4ed8;
+
+    --color-boton-azul: #2563eb;
+    --color-boton-azul-hover: #1d4ed8;
+
+    --color-boton-verde: #16a34a;
+    --color-boton-verde-hover: #15803d;
+
+    --color-boton-rojo: #dc2626;
+    --color-boton-rojo-hover: #b91c1c;
+
+    --color-verde: #22c55e;
+    --color-verde-hover: #16a34a;
+
+    --color-rojo: #ef4444;
+    --color-rojo-hover: #dc2626;
+
+    --color-naranja: #f59e0b;
+    --color-naranja-hover: #d97706;
+
+    --color-amarillo: #eab308;
+    --color-amarillo-hover: #ca8a04;
+
+    --color-verde-claro: #4ade80;
+    --color-verde-claro-hover: #22c55e;
+}
+
+body{
+	margin:0;
+	min-height:100vh;
+	background: var(--color-fondo);
+	font-family: Arial, Helvetica, sans-serif;
+
+	display:flex;
+	justify-content:center;
+}

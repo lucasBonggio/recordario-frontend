@@ -1,0 +1,121 @@
+.modal-overlay{
+    background: rgba(0,0,0,0.35);
+    position: fixed;
+}
+
+.modal-evaluacion{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    padding:55px 30px 30px 30px;
+    background: var(--color-modal);
+    border-radius:12px;
+    text-align:center;
+    position: relative;
+}
+
+.boton-cerrarEvaluacion{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border:none;
+    background:var(--color-gris);
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    cursor:pointer;
+    font-weight:bold;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:all .2s ease;
+}
+
+.titulo-evaluacion{
+    font-size:18px;
+    font-weight:600;
+    color: var(--color-texto);
+    line-height:1.4;
+}
+
+.contenedor-calificaciones{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-direction: row;
+}
+
+.nota{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    color: var(--color-texto-botones);
+    cursor:pointer;
+    transition:.2s;
+}
+
+
+.nota-1{
+    background: var(--color-rojo);
+}
+
+.nota-1:hover{
+    background-color: var(--color-rojo-hover);
+}
+
+.nota-2{
+    background: var(--color-naranja);
+}
+
+.nota-2:hover{
+    background: var(--color-naranja-hover);
+}
+
+.nota-3{
+    background: var(--color-amarillo);
+}
+
+.nota-3:hover{
+    background: var(--color-amarillo-hover);
+}
+
+.nota-4{
+    background: var(--color-verde-claro);
+}
+
+.nota-4:hover{
+    background: var(--color-verde-claro-hover);
+}
+
+.nota-5{
+    background: var(--color-verde);
+}
+
+.nota-5:hover{
+    background: var(--color-verde-hover);
+}
+
+.nota:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
+
+.boton-enviar-evaluacion{
+    background: var(--color-boton-azul);
+    color: var(--color-texto-botones);
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.boton-enviar-evaluacion:hover{
+    background:var(--color-boton-azul-hover);
+}

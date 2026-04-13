@@ -1,0 +1,110 @@
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+}
+
+.modal-perfil{
+    position:relative;
+
+    width:420px;
+    max-width:90%;
+
+    background: var(--color-modal);
+    border-radius:18px;
+    padding:40px 35px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,0.15);
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+
+    animation:fadeModal .2s ease;
+}
+
+.titulo-perfil{
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+    color: var(--color-texto);
+}
+
+.datos-usuario{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    padding:20px;
+    border-radius:14px;
+    background: var(--color-gris);
+}
+
+.nombre-usuario{
+    font-size:18px;
+    font-weight:600;
+    color:var(--color-texto);
+}
+
+.email-usuario{
+    font-size:14px;
+    color: var(--color-texto);
+}
+
+.acciones-usuario{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.boton-azul{
+    background: var(--color-boton-azul);
+    color: var(--color-texto-botones);
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.boton-azul:hover{
+    background: var(--color-boton-azul-hover);
+    transform:translateY(-2px);
+}
+
+.boton-rojo{
+    background:var(--color-boton-rojo);
+    color: var(--color-texto-botones);
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.boton-rojo:hover{
+    background: var(--color-boton-rojo-hover);
+    transform:translateY(-2px);
+}
+
+.boton-cerrar{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    width:34px;
+    height:34px;
+
+    font-size:20px;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}

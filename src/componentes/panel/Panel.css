@@ -1,0 +1,50 @@
+.contenedor-panel{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+}
+
+.mensaje-repaso{
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: var(--color-fondo);
+    color:  var(--color-texto);
+
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+    animation: fadeMensaje 3s ease forwards;
+}
+
+.boton-perfil{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+    color: var(--color-texto-botones);
+    background:linear-gradient(135deg, var(--color-boton-rojo-hover),var(--color-boton-rojo));
+    box-shadow:0 6px 14px rgba(0,0,0,0.08);
+}
+
+.boton-perfil:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(151, 15, 15, 0.25);
+}
+
+@keyframes fadeMensaje{
+    0%{ opacity:0; transform:translate(-50%,20px);}
+    10%{ opacity:1; transform:translate(-50%,0);}
+    90%{ opacity:1;}
+    100%{ opacity:0;}
+}

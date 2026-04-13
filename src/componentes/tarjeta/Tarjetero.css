@@ -1,0 +1,11 @@
+.contenedor-tarjetas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.tarjeta:hover {
+    z-index: 999;
+}

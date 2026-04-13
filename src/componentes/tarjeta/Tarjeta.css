@@ -1,0 +1,96 @@
+.tarjeta{
+    position: relative;
+    width: 290px;
+    height: 420px;
+    padding: 28px;
+    border-radius: 22px;
+    background: var(--color-tarjeta);
+    overflow: hidden;
+}
+
+.tarjeta::before{
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border-radius: 16px;
+    border: 2px solid  var(--color-card);
+    pointer-events: none;
+}
+
+.tarjeta h3,
+.tarjeta h4,
+.tarjeta h5,
+.tarjeta span{
+    position: relative;
+}
+
+.tarjeta h3,
+.tarjeta h4,
+.tarjeta h5,
+.tarjeta span{
+    background: var(--color-gris);
+    color: var(--color-texto);
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3{
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+.tarjeta h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tarjeta h5{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: .8;
+}
+
+.tarjeta span{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.tarjeta-mazo{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    box-shadow: 
+        0 20px 45px rgba(0,0,0,0.25),
+        0 8px 20px rgba(0,0,0,0.15);
+
+    transition: all .25s ease;
+}
+
+.tarjeta-mazo + .tarjeta-mazo {
+    margin-left: -225px;
+}
+
+.tarjeta-mazo:hover{
+    transform: translateY(-6px);
+    z-index: 2;
+}
+
+.tarjeta-modal{
+    transform:none;
+    margin:0;
+    box-shadow: none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.tarjeta-modal{
+    width: 320px;
+}

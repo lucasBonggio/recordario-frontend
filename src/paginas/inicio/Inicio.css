@@ -1,0 +1,180 @@
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor-principal{
+    height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin: 0 50px;
+}
+
+/* SECCION PRESENTACION */
+
+.presentacion{
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:40px;
+}
+
+
+/* BLOQUE BIENVENIDA */
+
+.contenedor-bienvenida h1{
+    font-size:56px;
+    margin:0;
+    color: var(--color-azul);
+    letter-spacing:2px;
+}
+
+.contenedor-bienvenida h3{
+    font-size:28px;
+    margin:5px 0;
+    font-weight:600;
+    color: var(--color-texto);
+}
+
+.contenedor-bienvenida h4{
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.6;
+    color:var(--color-subtexto);
+    max-width:520px;
+}
+
+/* TARJETA BETA */
+
+.contenedor-beta{
+    margin-top:20px;
+    padding:20px;
+    border-radius:12px;
+    border:2px solid var(--color-rojo-hover);
+    background:var(--color-fondo);
+    max-width:520px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.contenedor-beta h4{
+    margin:0 0 8px 0;
+    color:var(--color-rojo);
+    font-weight:700;
+}
+
+.contenedor-beta p{
+    margin:0;
+    color:var(--color-rojo);
+    font-size:15px;
+}
+
+.panel-login{
+    background: var(--color-fondo);
+    padding:40px;
+    width:380px;
+    border-radius: 10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 50px;
+}
+
+.saludo{
+    margin:0;
+    font-size:28px;
+    display: inline-block;
+    color: var(--color-texto);
+}
+
+.subtitulo{
+    color: var(--color-subtexto);
+    display:block;
+    margin-bottom:20px;
+}
+
+.formulario-login, .formulario-registro{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.campo input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid var(--color-gris-oscuro);
+    font-size:16px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+
+}
+
+.campo input:focus{
+    outline:none;
+    border-color: var(--color-azul);
+    box-shadow:0 0 0 2px rgba(24,119,242,0.2);
+}
+
+.boton-principal{
+    background: var(--color-boton-verde);
+    border:none;
+    padding:12px;
+    color: var(--color-texto-botones);
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.2s;
+    width: 100%;
+}
+
+.boton-principal:hover{
+    background: var(--color-boton-verde-hover);
+}
+
+.tabs{
+    display:flex;
+    margin-bottom:20px;
+}
+
+.boton-tab{
+    flex:1;
+    padding:10px;
+    border:none;
+    background: var(--color-fondo);
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:5px;
+
+}
+
+.boton-tab.activo{
+    background: var(--color-azul);
+    color: var(--color-texto-botones);
+    border-radius:8px;
+}
+.boton-tab:active {
+    border: none;
+}
+
+.switch-auth{
+    margin-top:20px;
+    text-align:center;
+}
+
+.switch-auth label{
+    color: var(--color-subtexto);
+}
+
+.switch-auth span{
+    color: var(--color-azul);
+    cursor:pointer;
+    margin-left:5px;
+}
+
+.mensaje-error{
+    color: var(--color-rojo);
+    font-size:14px;
+}
+
+.mensaje-exito{
+    color: var(--color-verde-hover);
+    font-size:14px;
+}

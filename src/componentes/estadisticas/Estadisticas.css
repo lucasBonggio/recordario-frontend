@@ -1,0 +1,30 @@
+.contenedor-stats{
+    display:flex;
+    gap:20px;
+    padding:30px;
+}
+
+.estadistica{
+    flex:1;
+    background: var(--color-modal);
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.estadistica h4{
+    margin:0;
+    font-size:16px;
+    color:var(--color-texto);
+    font-weight:500;
+}
+
+.estadistica span{
+    margin-top:8px;
+    font-size:32px;
+    font-weight:700;
+    color: var(--color-texto);
+}
