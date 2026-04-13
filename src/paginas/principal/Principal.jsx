@@ -1,4 +1,4 @@
-import Panel from '../../componentes/Panel/Panel';
+import Panel from '../../componentes/panel/Panel';
 
 import './Principal.css'
 
