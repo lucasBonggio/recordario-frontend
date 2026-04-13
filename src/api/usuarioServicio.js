@@ -2,7 +2,8 @@ import axios from 'axios';
 import api from './axios';
 
 const url = import.meta.env.VITE_BACKEND_URL;
-const API_PUBLICA =  url + "/api/v1/publico";
+
+const API_PUBLICA =  url + "api/v1/publico";
 
 export const registro = async (nombreUsuario, contrasena, email) => {
 
