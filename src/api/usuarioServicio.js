@@ -1,8 +1,8 @@
 import axios from 'axios';
 import api from './axios';
-import url from process.env.REACT_APP_BACKEND_URL;
 
-const API_PUBLICA = "http://localhost:8080/api/v1/publico";
+const url = import.meta.env.VITE_BACKEND_URL;
+const API_PUBLICA =  url + "/api/v1/publico";
 
 export const registro = async (nombreUsuario, contrasena, email) => {
 
