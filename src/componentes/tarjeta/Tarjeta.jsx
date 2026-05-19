@@ -5,11 +5,20 @@ function Tarjeta({tarjeta, variante = "mazo"}) {
         <div className={`tarjeta tarjeta-${variante}`}>
             <div className="tarjeta-inner">
                 <h3 className="tarjeta-id">TARJETA #{tarjeta.tarjetaId}</h3>
-                <h3 className='tarjeta-texto'>CAPITULO:</h3>
-                <h3 className='tarjeta-tipo'>{tarjeta.textoCapitulo}</h3>
-                <h5 className="tarjeta-tipo">{tarjeta.tipoCarta}</h5>
-                <h4 className="tarjeta-texto">{tarjeta.textoCarta}</h4>
+                <h3 className='tarjeta-texto'>CONCEPTO:</h3>
+                <h3 className='tarjeta-concepto'>{tarjeta.tituloTema}</h3>
                 <span className="tarjeta-pregunta">{tarjeta.pregunta}</span>
+                <div className="tarjeta-ideas">
+                    {tarjeta.puntosPrincipales
+                        ?.split(",")
+                        .map((idea, index) => (
+
+                            <span className="idea-chip" key={index}>
+                                {idea.trim()}
+                            </span>
+
+                        ))}
+                </div>
             </div>
         </div>
     );

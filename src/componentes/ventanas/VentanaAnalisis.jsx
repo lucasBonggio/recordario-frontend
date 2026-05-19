@@ -1,44 +1,39 @@
 import { useState } from "react";
-import { analizarTexto } from "../../api/analisisServicio";
+import { crearTarjeta } from "../../api/tarjetasServicio";
 import './VentanaAnalisis.css'
 
 function VentanaAnalisis({cerrar, cargarTarjetas }) {
     const [titulo, setTitulo] = useState("");
-    const [tituloCapitulo, setTituloCapitulo] = useState("");
-    const [estado, setEstado] = useState("LEYENDO");
-    const [capitulos, setCapitulos] = useState("");
-    const [notas, setNotas] = useState([""]);
-    const [texto, setTexto] = useState("");
+    const [ideasPrincipales, setIdeasPrincipales] = useState([""]);
     
     const [tarjetasCreadas, setTarjetasCreadas] = useState("");
     const [error, setError] = useState("");
 
     const agregarNota = () => {
-        setNotas([...notas, ""]);
+        setIdeasPrincipales([...ideasPrincipales, ""]);
     }
 
     const cambiarNota = (index, valor) => {
-        const nuevasNotas = [...notas];
+        const nuevasNotas = [...ideasPrincipales];
         nuevasNotas[index] = valor;
 
-        setNotas(nuevasNotas);
+        setIdeasPrincipales(nuevasNotas);
     }
     
 
     const enviarResumen = async (e) => {
         e.preventDefault();
 
-        const libro = {
+        const tema = {
             titulo: titulo,
-            estado: estado,
-            capitulos: [{
-                titulo: tituloCapitulo,
-                notas: notas.map(n =>({texto: n}))
-            }]
+            ideasPrincipales: ideasPrincipales.filter(
+                idea => idea.trim() !== ""
+            )
         };
 
+        console.log("TEMA QUE SE ENVÍA: " + tema);
         try {
-            const respuestaAnalisis = await analizarTexto(libro);
+            const respuestaAnalisis = await crearTarjeta(tema);
 
             setTarjetasCreadas(respuestaAnalisis);
             
@@ -59,49 +54,35 @@ function VentanaAnalisis({cerrar, cargarTarjetas }) {
                     &times;
                 </button>
 
-                <h2>ANÁLISIS DEL LIBRO</h2>
+                <h2>ANÁLISIS DEL CONCEPTO</h2>
                 <span className="subtitulo-modal">CONVERTÍ TUS NOTAS EN TARJETAS</span>
 
                 <form onSubmit={enviarResumen}>
                     <div className="contenedor-formulario">
                         <div className="info-libro">
-                            <h3>LIBRO</h3>
+                            <h3>CONCEPTO</h3>
                             <input
                                 type="text"
-                                placeholder="Título del libro"
+                                placeholder="Título del concepto"
                                 value={titulo}
                                 onChange={(e) => setTitulo(e.target.value)}
                             />
-
-                            <select
-                                value={estado}
-                                onChange={(e) => setEstado(e.target.value)}
-                            >
-                                <option value="LEYENDO">LEYENDO</option>
-                                <option value="PAUSADO">PAUSADO</option>
-                                <option value="COMPLETO">COMPLETO</option>
-                                <option value="REVISADO">REVISADO</option>
-                                <option value="OBSOLETO">OBSOLETO</option>
-                            </select>
                         </div>
 
                         <div className="info-capitulo">
-                            <h3>CAPÍTULO</h3>
-                            <input
-                                type="text"
-                                placeholder="Título del capítulo"
-                                value={tituloCapitulo}
-                                onChange={(e) => setTituloCapitulo(e.target.value)}
-                            />
+                            <h3>IDEAS PRINCIPALES</h3>
 
                             <div className="contenedor-notas">
-                                {notas.map((nota, index) => (
+                                {ideasPrincipales.map((nota, index) => (
+
                                     <input
                                         key={index}
                                         type="text"
-                                        placeholder={`Nota ${index + 1}`}
+                                        placeholder={`Idea ${index + 1}`}
                                         value={nota}
-                                        onChange={(e) => cambiarNota(index, e.target.value)}
+                                        onChange={(e) =>
+                                            cambiarNota(index, e.target.value)
+                                        }
                                     />
                                 ))}
 

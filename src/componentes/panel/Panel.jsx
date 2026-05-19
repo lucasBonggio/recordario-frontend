@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Botonera from "../botonera/Botonera";
 import Tarjetero from "../tarjeta/Tarjetero";
 import VentanaAnalisis from "../ventanas/VentanaAnalisis";
-import { obtenerTarjetas } from "../../api/usuarioServicio";
+import { obtenerTarjetas } from "../../api/tarjetasServicio";
 import VentanaRepaso from "../ventanas/VentanaRepaso";
 import { iniciarRepaso } from "../../api/repasoServicio";
 import Perfil from "../perfil/Perfil";
@@ -30,6 +30,7 @@ function Panel() {
         try {
             const datos = await obtenerTarjetas();
             setTarjetas(datos);
+            console.log("TARJETAS OBTENIDAS: " + datos)
 
         } catch (error) {
             setErrorTarjetas(error.message);

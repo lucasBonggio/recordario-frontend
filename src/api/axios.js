@@ -3,7 +3,7 @@ import axios from "axios";
 const url = import.meta.env.VITE_BACKEND_URL;
 
 const api = axios.create({
-    baseURL:  url + "api/v1",
+    baseURL:   `${url}/api/v1` ,
         withCredentials: true
 });
 

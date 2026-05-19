@@ -3,7 +3,7 @@ import api from './axios';
 
 const url = import.meta.env.VITE_BACKEND_URL;
 
-const API_PUBLICA =  url + "api/v1/publico";
+const API_PUBLICA =  `${url}/api/v1/publico`;
 
 export const registro = async (nombreUsuario, contrasena, email) => {
 
@@ -61,20 +61,7 @@ export const obtenerDatos = async () => {
     }
 }
 
-export const obtenerTarjetas = async () => {
-    try {
-        const response = await api.get(
-            `/autenticacion/tarjetas/obtener`
-        )
 
-        return response.data;
-    } catch (error) {
-        throw new Error(
-            error.response?.data?.mensaje ||
-            "Error al obtener tarjetas."
-        );        
-    }
-}
 
 export const obtenerEstadisticas = async () => {
     try {
