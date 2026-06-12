@@ -30,7 +30,6 @@ function Panel() {
         try {
             const datos = await obtenerTarjetas();
             setTarjetas(datos);
-            console.log("TARJETAS OBTENIDAS: " + datos)
 
         } catch (error) {
             setErrorTarjetas(error.message);

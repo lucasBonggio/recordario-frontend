@@ -4,7 +4,7 @@ import axios from "axios";
 const url = import.meta.env.VITE_BACKEND_URL;
 
 const AuthContext = createContext();
-const API_AUTH =  url + "api/v1/autenticacion/usuario/me";
+const API_AUTH =  url + "/api/v1/autenticacion/usuario/me";
 
 export function AuthProvider({children}) {
     const [autenticado, setAutenticado] = useState(false);
