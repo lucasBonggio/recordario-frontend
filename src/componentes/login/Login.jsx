@@ -35,7 +35,10 @@ function Login() {
             navegar("/inicio");
 
         } catch (error) {
-            setError(error);
+                setError(
+                            error.response?.data?.mensaje ||
+                            "Usuario o contraseña incorrectos."
+                        )
         }finally{
             setCargando(false);
         }

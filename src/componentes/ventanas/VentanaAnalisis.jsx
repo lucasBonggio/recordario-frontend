@@ -31,7 +31,6 @@ function VentanaAnalisis({cerrar, cargarTarjetas }) {
             )
         };
 
-        console.log("TEMA QUE SE ENVÍA: " + tema);
         try {
             const respuestaAnalisis = await crearTarjeta(tema);
 

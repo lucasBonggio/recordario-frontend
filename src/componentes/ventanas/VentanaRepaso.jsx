@@ -14,14 +14,19 @@ function VentanaRepaso({cerrar, tarjeta}) {
         try { 
             const respuesta = await responderTarjeta(nota);
             
+            console.log("Estado sesion: " + respuesta.estadoSesion?.sesionFinalizada);
+
             if (respuesta.estadoSesion?.sesionFinalizada) {
                 setMensajeSesion(respuesta.mensaje);
                 
                 setTimeout(() => {
                     cerrar();
                 }, 500);
+
+                return;
             }
             setTarjetaActual(respuesta.tarjeta);
+
         } catch (error) {
             console.error(error);
         }

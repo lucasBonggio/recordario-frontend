@@ -80,8 +80,10 @@ export const obtenerEstadisticas = async () => {
 
 export const actualizarContrasena = async (contrasenaActual, nuevaContrasena) => {
     try {
+        console.log(api.defaults.baseURL);
+        console.log(import.meta.env.VITE_BACKEND_URL);
         const response = await api.post(
-            `/autenticacion/usuario/contraseña/cambiar`,
+            `/autenticacion/usuario/actualizar`,
             {contrasenaActual, nuevaContrasena}
         )
 
